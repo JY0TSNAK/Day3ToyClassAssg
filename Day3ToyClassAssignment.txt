@@ -20,8 +20,8 @@ public class HelloWorld{
         RCToyVehicle t3 = new RCToyVehicle("RCCar",7000,"Metal");
         t3.setAgeLimit(5);
         t3.setVehicleType("4wheeler");
-        t3.setRecharable(false);
-        boolean isSafe3 = t2.checkSafeAge(10);
+        t3.setRechargeable(true);
+        boolean isSafe3 = t3.checkSafeAge(10);
         System.out.println("Toy is Safe " + isSafe3);
         System.out.println("Toy is ..." + t3);
         System.out.println("-------------------");
@@ -103,10 +103,11 @@ class RCToyVehicle extends ToyVehicle
 		return "RCToyVehicle [rechargeable=" + rechargeable + ", " + super.toString() + "]";
 	}
 	
-	void setRecharable(boolean recharable)
+	void setRechargeable(boolean rechargeable)
 	{
 	    System.out.println("Setting is rechargeable status...");
 	    this.rechargeable = rechargeable;
+	    System.out.println("rechargeable status..." + this.rechargeable);
 	}
     
 }
